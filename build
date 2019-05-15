@@ -1,0 +1,1 @@
+tsc -t es5 -m umd layout.ts

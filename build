@@ -1,1 +1,6 @@
 tsc -t es5 -m umd layout.ts
+cp layout.js tmp
+echo 'var exports = window;' > layout.js
+cat tmp >> layout.js
+rm tmp
+uglify -s layout.js -o layout.min.js
